@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>問い合わせフォーム</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body style="font-family:'メイリオ', sans-serif;">
+	<div class="container">
+		 <BR/><BR/>
+		 <div class="form-group">
+            <label>会社名<font color=#ff0000><b>※</b></font></label>
+            <div class="row">
+	            <div class="col-xs-8 col-md-5 col-sm-5 col-lg-4">
+	            	<input type="text" name="company" class="form-control" maxlength="40"/>
+	            	<div id="company-msg" class="alert alert-danger" role="alert" style="display:none;height:28px;margin-bottom: 0px;padding:5px 0px 0px 10px;">
+					  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					  <span class="sr-only">Error:</span>入力してください。
+					</div>
+	            </div>
+            </div>
+        </div>
+         <div class="form-group">
+            <label>部署</label>
+            <div class="row">
+	            <div class="col-xs-8 col-md-5 col-sm-5 col-lg-4">
+	            	<input type="text" name="division" class="form-control" maxlength="40"/>
+	            	<div id="division-msg" class="alert alert-danger" role="alert" style="display:none;height:28px;margin-bottom: 0px;padding:5px 0px 0px 10px;">
+						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+						<span class="sr-only">Error:</span>入力してください。
+					</div>
+	            </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>氏名<font color=#ff0000><b>※</b></font></label>
+            <div class="row">
+	            <div class="col-xs-8 col-md-5 col-sm-5 col-lg-4">
+	            	<input type="text" name="name" class="form-control" maxlength="40"/>
+	            	<div id="name-msg" class="alert alert-danger" role="alert" style="display:none;height:28px;margin-bottom: 0px;padding:5px 0px 0px 10px;">
+						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+						<span class="sr-only">Error:</span>入力してください。
+					</div>
+	            </div>	            
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Email<font color=#ff0000><b>※</b></font></label>
+            <div class="row">
+	            <div class="col-xs-8 col-md-5 col-sm-5 col-lg-4">
+	            	<input type="text" name="email" class="form-control" maxlength="40"/>
+	            	<div id="email-msg" class="alert alert-danger" role="alert" style="display:none;height:28px;margin-bottom: 0px;padding:5px 0px 0px 10px;">
+						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+						<span class="sr-only">Error:</span>入力してください。
+					</div>
+	            	<div id="email-msg2" class="alert alert-danger" role="alert" style="display:none;height:28px;margin-bottom: 0px;padding:5px 0px 0px 10px;">
+						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+						<span class="sr-only">Error:</span>正しいメールアドレスを入力してください。
+					</div>
+	            </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>電話番号<font color=#ff0000><b>※</b></font></label>
+            <div class="row">
+	            <div class="col-xs-8 col-md-5 col-sm-5 col-lg-4">
+	            	<input type="text" name="tel" class="form-control" maxlength="40"/>
+	            	<div id="tel-msg" class="alert alert-danger" role="alert" style="display:none;height:28px;margin-bottom: 0px;padding:5px 0px 0px 10px;">
+						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+						<span class="sr-only">Error:</span>入力してください。
+					</div>
+	            </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>住所</label>
+            <input type="text" name="address" class="form-control" maxlength="40"/>
+        	<div id="address-msg" class="alert alert-danger" role="alert" style="display:none;height:28px;margin-bottom: 0px;padding:5px 0px 0px 10px;">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Error:</span>入力してください。
+			</div>
+        </div>
+        <div class="form-group">
+		    <label>お問合せ内容<font color=#ff0000><b>※</b></font></label><br/>
+		    <div class="checkbox-inline">
+		    	<input type="checkbox" value="detail" name="interests" id="detail" group="detai-group" checked="checked">
+		        <label for="detail" style="font-weight: normal;">商品の詳細を知りたい</label>
+		    </div>
+		    <div class="checkbox-inline">
+		    	<input type="checkbox" value="quote" name="interests" id="quote" group="detai-group">
+		        <label for="quote" style="font-weight: normal;">見積りが欲しい</label>
+		    </div>
+		    <div class="checkbox-inline">
+		    	<input type="checkbox" value="other" name="interests" id="other" group="detai-group">
+		        <label for="other" style="font-weight: normal;">その他</label>
+		    </div>
+        	<div id="confirm-msg" class="alert alert-danger" role="alert" style="display:none;height:28px;margin-bottom: 0px;padding:5px 0px 0px 10px;">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Error:</span>お問合せ内容を選択してください。
+			</div>
+		</div>
+        <div class="form-group">
+            <label>お問合せ詳細</label>
+            <div>
+            	<textarea class="form-control" rows="7" id="comment" style="resize: none;"></textarea>
+            </div>
+            <div id="comment-msg" class="alert alert-danger" role="alert" style="display:none;height:28px;margin-bottom: 0px;padding:5px 0px 0px 10px;">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Error:</span>入力してください。
+			</div>
+        </div>
+
+		<BR/>
+		<div>
+			<span>
+				<font size="2">個人情報利用の目的をご確認の上、各項目にご入力頂き送信ボタンを押してください。別途弊社担当者からご連絡いたします。<br/>
+				<a href="http://techno-wing.co.jp/goods/mokuteki/">個人情報利用の目的</a></font>
+			</span>
+		</div>
+		<BR/>
+		<div class="form-group">
+			<label>個人情報利用の目的の同意<font color=#ff0000><b>※</b></font></label><br/>
+			<div class="btn-group" data-toggle="buttons-radio">
+			  <label><input type="radio" name="conf-radio" id="radio1" value="radio1" > <font style="font-weight: normal;">同意する</font></label>
+			</div>
+            <div id="conf-msg" class="alert alert-danger" role="alert" style="display:none;height:28px;margin-bottom: 0px;padding:5px 0px 0px 10px;">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Error:</span>同意の上チェックしてください。
+			</div>
+		</div>
+        <div id="complete-msg" class="alert alert-info" role="alert" style="display:none;">
+			<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+			<span class="sr-only">Info:</span>お問合せありがとうございました。
+		</div>
+		<div id="button_area" width="100%" style="text-align : center ;">
+        	<input onClick="uploadFile();" type="button" value="送信する" id="css_button" class="button_right" style="width:80%; height:50px; font-size:25px; border:3px solid #ffffff; background-color:#FFA605; "/>
+        </div>
+	</div>
+<script src="https://s3-ap-northeast-1.amazonaws.com/mbingohp/aws-sdk-2.2.6.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        var $id = function(id) { return document.getElementById(id); };
+        AWS.config.region = "ap-northeast-1";
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: "ap-northeast-1:xxxxxxxxxxxx"});
+        AWS.config.credentials.get(function(err) {
+            if (!err) {
+                console.log("Cognito Identify Id: " + AWS.config.credentials.identityId);
+            }
+        });
+		
+
+        function uploadFile() {
+			//入力値チェック
+			$("div[id='company-msg']").css('display','none');
+			$("div[id='name-msg']").css('display','none');
+			$("div[id='email-msg']").css('display','none');
+			$("div[id='email-msg2']").css('display','none');
+			$("div[id='tel-msg']").css('display','none');
+			$("div[id='confirm-msg']").css('display','none');
+			$("div[id='conf-msg']").css('display','none');
+			$("div[id='complete-msg']").css('display','none');
+			
+			//会社			
+			if($("input[name='company']").val() == ""){
+				$("div[id='company-msg']").css('display','block');
+			    return false;
+			}
+			//氏名			
+			if($("input[name='name']").val() == ""){
+				$("div[id='name-msg']").css('display','block');
+			    return false;
+			}
+			//Email			
+			if($("input[name='email']").val() == ""){
+				$("div[id='email-msg']").css('display','block');
+			    return false;
+			}
+			if(!$("input[name='email']").val().match( /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/g)) {  
+				$("div[id='email-msg2']").css('display','block');
+			    return false;
+        	}        	
+			//電話番号			
+			if($("input[name='tel']").val() == ""){
+				$("div[id='tel-msg']").css('display','block');
+			    return false;
+			}
+			//問い合わせ内容			
+		    // チェックを付けた数を取得する
+		    if($("input[group='detai-group']:checked").length < 1){
+		        $("div[id='confirm-msg']").css('display','block');
+		        return false;
+		    }
+		    //個人情報利用の目的の同意		    
+		    if(!$("input:radio[name='conf-radio']:checked").val()) {
+		        $("div[id='conf-msg']").css('display','block');
+		        return false;
+		    }
+
+			var confirmTitle = '';
+			//問い合わせ内容を文字に
+		    if($("input:checkbox[id='detail']:checked").val()){
+		        confirmTitle = '　商品の詳細を知りたい';
+		    }
+		    if($("input:checkbox[id='quote']:checked").val()){
+		        confirmTitle = confirmTitle + '　見積りが欲しい';
+		    }
+		    if($("input:checkbox[id='other']:checked").val()){
+		        confirmTitle = confirmTitle + '　その他';
+		    }
+            AWS.config.region = 'ap-northeast-1';
+            var s3BucketName = "mbingohp";
+            var now = new Date();
+            var obj = {"info":'モバイルビンゴのホームページからの問い合わせ',
+            			"company":$("input[name='company']").val(),
+            		   "division":$("input[name='division']").val(),
+            		   "name":$("input[name='name']").val(),
+            		   "email":$("input[name='email']").val(),
+            		   "tel":$("input[name='tel']").val(),
+            		   "address":$("input[name='address']").val(),
+            		   "confirmTitle":confirmTitle,
+            		   "comment":$id("comment").value,
+            		   "date": now.toLocaleString()};
+            var s3 = new AWS.S3({params: {Bucket: s3BucketName}});
+            var blob = new Blob([JSON.stringify(obj, null, 2)], {type:'text/plain'});
+            s3.putObject({Key: "uploads/" +now.getTime()+".txt", ContentType: "text/plain", Body: blob, ACL: "public-read"},
+            function(err, data){
+                if(data !== null){
+                    //alert("お問い合わせ完了しました。");
+                    $("div[id='complete-msg']").css('display','block');
+                    $("input:button[id='css_button']").prop('disabled', 'true');
+            		$("input:button[id='css_button']").css('background-color','lightgray');                   
+                }
+                else{
+                    //alert("Upload Failed" + err.message);
+                }
+            });
+            
+        }
+    </script>
+</body>
+</html>
